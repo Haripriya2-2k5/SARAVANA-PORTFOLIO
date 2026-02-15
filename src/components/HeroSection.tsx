@@ -1,13 +1,26 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { Volume2, VolumeX } from "lucide-react";
 import trainerHero from "@/assets/trainer-hero.png";
 import introVideo from "@/assets/INTRO.mp4";
 
 const HeroSection = () => {
+  const [isMuted, setIsMuted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           loop
           playsInline
@@ -18,6 +31,22 @@ const HeroSection = () => {
         {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-background/80" />
       </div>
+
+      {/* Mute/Unmute Button */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.6 }}
+        onClick={toggleMute}
+        className="absolute top-20 right-4 md:top-24 md:right-8 z-20 w-12 h-12 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary hover:border-primary transition-all duration-300 flex items-center justify-center group"
+        aria-label={isMuted ? "Unmute video" : "Mute video"}
+      >
+        {isMuted ? (
+          <VolumeX className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+        ) : (
+          <Volume2 className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+        )}
+      </motion.button>
 
       {/* Floating background words */}
       <div className="absolute inset-0 overflow-hidden z-[1]">
