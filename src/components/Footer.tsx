@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -79,10 +79,10 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="mailto:saravanachamp369@gmail.com"
                 className="w-10 h-10 border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               >
-                <Youtube className="w-5 h-5" />
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </motion.div>
