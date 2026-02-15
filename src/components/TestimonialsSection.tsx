@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, QrCode, MessageSquare } from "lucide-react";
+import { Star, MessageSquare } from "lucide-react";
 
 const testimonials = [
   {
@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -85,25 +85,6 @@ const TestimonialsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* QR Code Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center"
-        >
-          <div className="bg-card border-2 border-primary p-8 inline-block mb-6">
-            <QrCode className="w-32 h-32 text-primary" />
-          </div>
-          <h3 className="text-2xl font-bebas text-foreground mb-2">
-            SHARE YOUR TRANSFORMATION
-          </h3>
-          <p className="text-muted-foreground max-w-md">
-            Scan to submit your success story and inspire others on their journey
-          </p>
-        </motion.div>
       </div>
     </section>
   );
