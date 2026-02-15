@@ -8,7 +8,6 @@ import apparelPolo from "@/assets/apparel-polo.png";
 const products = [
   {
     name: "Undefeated Stealth Jacket",
-    price: "₹4,999",
     tag: "COMING SOON",
     color: "Black / Reflective",
     image: apparelJacket,
@@ -17,7 +16,6 @@ const products = [
   },
   {
     name: "CHAMP Oversized Tee",
-    price: "₹1,499",
     tag: "COMING SOON",
     color: "Black / Grey",
     image: apparelTee,
@@ -26,7 +24,6 @@ const products = [
   },
   {
     name: "Lion Crest Polo",
-    price: "₹1,999",
     tag: "COMING SOON",
     color: "White / Black",
     image: apparelPolo,
@@ -109,7 +106,6 @@ const ApparelSection = () => {
                 {product.name}
               </h3>
               <p className="text-sm text-muted-foreground">{product.color}</p>
-              <p className="text-lg font-oswald text-primary mt-2">{product.price}</p>
             </motion.div>
           ))}
         </div>
@@ -185,11 +181,8 @@ const ApparelSection = () => {
                 <h3 className="text-4xl font-bebas text-foreground mb-2">
                   {products[selectedProduct].name}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-1">
+                <p className="text-sm text-muted-foreground mb-6">
                   {products[selectedProduct].color}
-                </p>
-                <p className="text-2xl font-oswald text-primary mb-6">
-                  {products[selectedProduct].price}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {products[selectedProduct].description}
