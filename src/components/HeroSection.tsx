@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
 import trainerHero from "@/assets/trainer-hero.png";
+import introVideo from "@/assets/INTRO.mp4";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background overlay */}
-      <div className="absolute inset-0 z-0 bg-background" />
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={introVideo} type="video/mp4" />
+        </video>
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
 
       {/* Floating background words */}
       <div className="absolute inset-0 overflow-hidden z-[1]">
