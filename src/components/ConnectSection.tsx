@@ -58,12 +58,12 @@ const ConnectSection = () => {
               </div>
               <h4 className="font-oswald text-lg text-foreground mb-2">INSTAGRAM</h4>
               <a 
-                href="https://www.instagram.com/saravanachampion369" 
+                href="https://www.instagram.com/saravanachampion_369" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                @Saravanachampion369
+                @Saravanachampion_369
               </a>
             </div>
 
@@ -94,7 +94,7 @@ const ConnectSection = () => {
               <h3 className="text-2xl font-bebas text-foreground">INSTAGRAM</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              Follow @Saravanachampion369 for:
+              Follow @Saravanachampion_369 for:
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-start gap-2 text-muted-foreground">
@@ -174,7 +174,7 @@ const ConnectSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://www.instagram.com/saravanachampion369"
+              href="https://www.instagram.com/saravanachampion_369"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-primary text-primary-foreground font-oswald text-lg tracking-wider uppercase hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--gold)/0.5)] inline-flex items-center justify-center gap-2"
